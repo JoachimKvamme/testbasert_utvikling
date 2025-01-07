@@ -1,3 +1,4 @@
+using C_ASSIGNMENT_BUILDER.Assignment;
 using C_ASSIGNMENT_BUILDER.Engine.AssignmentBuilder;
 namespace C_ASSIGNMENT_BUILDER.CurrentAssignment;
 
@@ -21,7 +22,8 @@ public class AssignmentList : AssignmentListBase
             typeof(TestMethods),
             typeof(TestDatastructures),
             typeof(TestArrayAndListMethods),
-            typeof(TDDTests)
+            typeof(TDDTests),
+            typeof(TestCustom)
         ];
     }
 }
