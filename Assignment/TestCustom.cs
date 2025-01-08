@@ -28,11 +28,11 @@ namespace C_ASSIGNMENT_BUILDER.Assignment
     [Assignment(1)]
     public void TestPrime()
     {
-        Assert.Equal(true, CheckPrime(2));
-        Assert.Equal(false, CheckPrime(266));
-        Assert.Equal(true, CheckPrime(523));
-        Assert.Equal(true, CheckPrime(5));
-        Assert.Equal(false, CheckPrime(10));
+        Assert.True(CheckPrime(2));
+        Assert.False(CheckPrime(266));
+        Assert.True(CheckPrime(523));
+        Assert.True(CheckPrime(5));
+        Assert.False(CheckPrime(10));
     }
     }
 }
