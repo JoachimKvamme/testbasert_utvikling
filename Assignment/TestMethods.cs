@@ -15,7 +15,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public string StringMethod(string str)
     {
-        throw new NotImplementedException();
+        return str;
     }
     /// <summary>
     /// Return a new string array
@@ -25,7 +25,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public string[] StringArrayMethod(string[] arr)
     {
-        throw new NotImplementedException();
+        return arr;
     }
     /// <summary>
     /// Return the sum of a + b
@@ -36,7 +36,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public int AddIntMethod(int a, int b)
     {
-        throw new NotImplementedException();
+        return a + b;
     }
     /// <summary>
     /// Return the sum of a * b
@@ -47,7 +47,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double MultiplyDoubleMethod(double a, double b)
     {
-        throw new NotImplementedException();
+        return a * b;
     }
     /// <summary>
     /// Return a list of doubles
@@ -56,7 +56,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public List<double> ListDoubleMethod()
     {
-        throw new NotImplementedException();
+        return new List<double>();
     }
     /// <summary>
     /// Return a single characther
@@ -66,7 +66,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public char CharMethod(char c)
     {
-        throw new NotImplementedException();
+        return c;
     }
     /// <summary>
     /// Return a boolean that should be true
@@ -76,7 +76,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotTrue(bool value)
     {
-        throw new NotImplementedException();
+        return value;
     }
     /// <summary>
     /// Return a boolean that should be false
@@ -86,11 +86,11 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool IsNotFalse(bool value)
     {
-        throw new NotImplementedException();
+        return value;
     }
     public List<Generics> GenericTypeMethod(Generics e, Generics t)
     {
-        throw new NotImplementedException();
+        return new List<Generics>();
     }
     /// <summary>
     /// Can enter if the age is greater than or equal to 18, 
@@ -100,7 +100,11 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public bool CanEnter(int age)
     {
-        throw new NotImplementedException();
+        if (age >= 18) {
+            return true;
+    } else {
+        return false;
+    }
     }
     /// <summary>
     /// Return a new dictionary with int keys and string values
@@ -109,7 +113,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public Dictionary<int, string> DictionaryMethod()
     {
-        throw new NotImplementedException("");
+        return new Dictionary<int, string>();
     }
     /// <summary>
     /// Return the square of a (a * a)
@@ -119,7 +123,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double Square(double a)
     {
-        throw new NotImplementedException();
+        return a * a;
     }
     /// <summary>
     /// Return the sum of a / b, make sure that a and b cannot be 0
@@ -130,7 +134,7 @@ public class TestMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public double DivideNumbers(double a, double b)
     {
-        throw new NotImplementedException();
+        return 0;
     }
 
     /// <summary>

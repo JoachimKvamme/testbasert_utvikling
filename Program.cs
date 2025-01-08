@@ -7,10 +7,11 @@ using C_ASSIGNMENT_BUILDER.Assignment;
 var guide = new Guide();
 /* Her sier vi hvilken oppgaveliste som skal brukes. */
 var assignments = new AssignmentList();
-//testCustom.Fibonacci();
+
+TestArrayAndListMethods testArrayAndListMethods = new TestArrayAndListMethods();
+testArrayAndListMethods.Fibonacci(10);
 
 
 /* Her går vi gjennom oppgavesettet. Programmet krasjer med vilje on Assert Failure, men også starte på nytt ved en filsave.
     Når programmet starter på nytt blir en ny rapport generert i consol, med feedback på hva assignments som er ferdig, og hva som er neste på listen. */
 return assignments.Walkthrough(guide);
-

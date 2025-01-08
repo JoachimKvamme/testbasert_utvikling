@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using C_ASSIGNMENT_BUILDER.Engine.AssignmentBuilder;
 using Xunit;
 using Xunit.Sdk;
@@ -10,17 +11,17 @@ public class TestArrayAndListMethods : AssignmentBase
 {
     public string[] StringArray(string[] arr)
     {
-        throw new NotImplementedException();
+        return arr;
     }
 
     public int[] IntSum(int a, int b)
     {
-        throw new NotImplementedException();
+        return new int[a +b];
     }
 
     public List<string> LoopList(List<string> element)
     {
-        throw new NotImplementedException();
+        return element;
     }
     /// <summary>
     /// Implement a simple Dictionary method
@@ -30,12 +31,15 @@ public class TestArrayAndListMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public Dictionary<int, string> LoopDict(Dictionary<int, string> element)
     {
-        throw new NotImplementedException();
+
+
+        return element;
     }
 
     public string ReverseString(string arr)
     {
-        throw new NotImplementedException();
+        return new string(arr.Reverse().ToArray());
+
     }
 
     /*
@@ -62,6 +66,7 @@ public class TestArrayAndListMethods : AssignmentBase
         // Array.Sort(arr);
         if (x == -1 || arr == null)
         {
+            
             throw new Exception();
         }
         throw new NotImplementedException();
@@ -74,7 +79,30 @@ public class TestArrayAndListMethods : AssignmentBase
     /// <exception cref="NotImplementedException"></exception>
     public int Fibonacci(int n)
     {
-        throw new NotImplementedException();
+        List<int> sequence = new List<int>();
+        int n1 = 0;
+        int n2 = 1;
+        int n3;
+        sequence.Add(n1);
+        sequence.Add(n2);
+        if(n > 1) {
+            for (int i = 0; i < n; i++)
+            {
+
+                n3 = n1 + n2;
+                sequence.Add(n3);
+                n1 = n2;
+                n2 = n3;
+                
+            }
+        }
+        foreach (var item in sequence)
+        {
+            Console.WriteLine(item);
+        }
+        Console.WriteLine(sequence[n]);
+        int returnValue = sequence[n];
+        return returnValue;
     }
 
 
@@ -161,7 +189,9 @@ public class TestArrayAndListMethods : AssignmentBase
     {
         Assert.Equal(0, Fibonacci(0));
         Assert.Equal(1, Fibonacci(1));
-        Assert.Equal(2, Fibonacci(2));
+        // I Fibonacci-rekken, hvis vi begynner med at indeks 0 = 0, og indeks 1 = 1, er indeks 2 = 1. 
+        // Endret denne tilsvarende det, sånn at testen ble mulig å bestå. 
+        Assert.Equal(1, Fibonacci(2));
         Assert.Equal(5, Fibonacci(5));
         Assert.Equal(55, Fibonacci(10));
     }
