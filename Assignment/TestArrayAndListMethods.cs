@@ -96,13 +96,7 @@ public class TestArrayAndListMethods : AssignmentBase
                 
             }
         }
-        foreach (var item in sequence)
-        {
-            Console.WriteLine(item);
-        }
-        Console.WriteLine(sequence[n]);
-        int returnValue = sequence[n];
-        return returnValue;
+        return sequence[n];
     }
 
 
